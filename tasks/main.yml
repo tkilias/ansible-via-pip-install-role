@@ -1,0 +1,14 @@
+---
+- name: Install dependencies
+  yum: name={{item}} state=installed
+  with_items:
+    - make
+    - asciidoc
+    - python-setuptools
+    - python2-devel
+
+- name: Install ansible via pip
+  pip: name={{item}}
+  with_items:
+    - ansible
+    - jmespath
