@@ -6,6 +6,7 @@
     - asciidoc
     - python-setuptools
     - python2-devel
+    - python-crypto
 
 - name: Install ansible via pip
   pip: name={{item}}
